@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+  ckan:
+    image: ckan:test
+    volumes:
+      - ./production.ini:/etc/ckan/default/production.ini
+      - ./jetty8:/etc/default/jetty8
+      - ./start_up.sh:/start_up.sh
+    ports:
+      - "5000:5000"
+    command: ./start_up.sh
