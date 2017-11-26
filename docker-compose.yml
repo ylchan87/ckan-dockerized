@@ -2,11 +2,18 @@ version: "2"
 
 services:
   ckan:
-    image: ckan:test
+    image: yulapshun/ckan:ubuntu-2.7.2
     volumes:
       - ./production.ini:/etc/ckan/default/production.ini
       - ./jetty8:/etc/default/jetty8
+      - ./ckan_storage:/var/lib/ckan
       - ./start_up.sh:/start_up.sh
     ports:
       - "5000:5000"
+    env_file: .env
     command: ./start_up.sh
+  postgres:
+    image: postgres:9.5
+    volumes:
+      - ./db_data:/var/lib/postgresql/data/pgdata
+    env_file: .env

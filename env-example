@@ -1,0 +1,8 @@
+POSTGRES_USER=ckan_default
+POSTGRES_PASSWORD=example
+POSTGRES_DB=ckan_default
+PGDATA=/var/lib/postgresql/data/pgdata
+
+CKAN_SQLALCHEMY_URL=postgresql://ckan_default:example@postgres/ckan_default
+CKAN_SITE_ID=ckan_test
+CKAN_SITE_URL=http://127.0.0.1:5000
