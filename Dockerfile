@@ -18,4 +18,4 @@ RUN wget http://packaging.ckan.org.s3-eu-west-1.amazonaws.com/python-ckan_2.7-xe
 RUN dpkg -i python-ckan_2.7-xenial_amd64.deb
 
 RUN mv /etc/solr/conf/schema.xml /etc/solr/conf/schema.xml.bak
-RUN ln -s /usr/lib/ckan/default/src/ckan/ckan/config/solr/schema.xml /etc/solr/conf/schema.xml
+COPY schema.xml /etc/solr/conf/schema.xml
