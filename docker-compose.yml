@@ -17,3 +17,7 @@ services:
     volumes:
       - ./db_data:/var/lib/postgresql/data/pgdata
     env_file: .env
+  redis:
+    image: redis:4.0
+    volumes:
+      - ./redis_data:/data
