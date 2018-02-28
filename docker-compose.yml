@@ -15,7 +15,7 @@ services:
   postgres:
     image: postgres:9.5
     volumes:
-      - ./db_data:/var/lib/postgresql/data/pgdata
+      - ./db_data:/var/lib/postgresql/data
     env_file: .env
   redis:
     image: redis:4.0
