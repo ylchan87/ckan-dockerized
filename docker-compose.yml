@@ -8,6 +8,7 @@ services:
       - ./jetty8:/etc/default/jetty8
       - ./ckan_storage:/var/lib/ckan
       - ./start_up.sh:/start_up.sh
+      - ./ckanext-customschema:/usr/lib/ckan/default/src/ckanext-customschema
     ports:
       - "5000:5000"
     env_file: .env
