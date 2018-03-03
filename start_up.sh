@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source /usr/lib/ckan/default/bin/activate
+
 # service postgresql start
 service jetty8 start
 
@@ -23,5 +25,8 @@ else
 
     ckan db init
 fi
+
+# Need this so that dataset will appear after container removal
+paster --plugin=ckan search-index rebuild -c /etc/ckan/default/production.ini
 
 ckan serve
