@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.rst
+requirements.txt
+setup.cfg
+setup.py
+ckanext/__init__.py
+ckanext/customschema/__init__.py
+ckanext/customschema/plugin.py
+ckanext/customschema/tests/__init__.py
+ckanext/customschema/tests/test_plugin.py
+ckanext_customschema.egg-info/PKG-INFO
+ckanext_customschema.egg-info/SOURCES.txt
+ckanext_customschema.egg-info/dependency_links.txt
+ckanext_customschema.egg-info/entry_points.txt
+ckanext_customschema.egg-info/namespace_packages.txt
+ckanext_customschema.egg-info/top_level.txt
