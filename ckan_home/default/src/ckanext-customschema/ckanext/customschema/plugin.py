@@ -1,36 +1,44 @@
 import ckan.plugins as p
 import ckan.plugins.toolkit as tk
+from ckan.lib.plugins import DefaultTranslation
 
 
-class CustomschemaPlugin(p.SingletonPlugin, tk.DefaultDatasetForm):
+class CustomschemaPlugin(p.SingletonPlugin, DefaultTranslation, tk.DefaultDatasetForm):
     p.implements(p.IDatasetForm)
+    p.implements(p.ITranslation)
     p.implements(p.IConfigurer)
 
 
-    def create_package_schema(self):
-        # let's grab the default schema in our plugin
-        schema = super(CustomschemaPlugin, self).create_package_schema()
-        # our custom field
+    def _modify_schema(self, schema):
         schema.update({
-            'custom_text': [tk.get_validator('ignore_missing'),
-                            tk.get_converter('convert_to_extras')]
+            'start_date': [tk.get_validator('ignore_missing'),
+                           tk.get_converter('convert_to_extras')],
+            'end_date': [tk.get_validator('ignore_missing'),
+                         tk.get_converter('convert_to_extras')],
+            'last_update_date': [tk.get_validator('ignore_missing'),
+                                 tk.get_converter('convert_to_extras')],
         })
+        return schema
+
+    def create_package_schema(self):
+        schema = super(CustomschemaPlugin, self).create_package_schema()
+        schema = self._modify_schema(schema)
         return schema
 
     def update_package_schema(self):
         schema = super(CustomschemaPlugin, self).update_package_schema()
-        # our custom field
-        schema.update({
-            'custom_text': [tk.get_validator('ignore_missing'),
-                            tk.get_converter('convert_to_extras')]
-        })
+        schema = self._modify_schema(schema)
         return schema
 
     def show_package_schema(self):
         schema = super(CustomschemaPlugin, self).show_package_schema()
         schema.update({
-            'custom_text': [tk.get_converter('convert_from_extras'),
-                            tk.get_validator('ignore_missing')]
+            'start_date': [tk.get_converter('convert_from_extras'),
+                           tk.get_validator('ignore_missing')],
+            'end_date': [tk.get_converter('convert_from_extras'),
+                         tk.get_validator('ignore_missing')],
+            'last_update_date': [tk.get_converter('convert_from_extras'),
+                                 tk.get_validator('ignore_missing')],
         })
         return schema
 
@@ -48,3 +56,12 @@ class CustomschemaPlugin(p.SingletonPlugin, tk.DefaultDatasetForm):
         # Add this plugin's templates dir to CKAN's extra_template_paths, so
         # that CKAN will use this plugin's custom templates.
         tk.add_template_directory(config, 'templates')
+
+    # def i18n_directory(self):
+    #     return super(CustomschemaPlugin, self).i18n_directory()
+
+    # def i18n_locales(self):
+    #     return ['zh_TW,', 'zh_CN', 'en']
+
+    # def i18n_domain(self):
+    #     return super(CustomschemaPlugin, self).i18n_domain()

@@ -1,0 +1,48 @@
+# English translations for ckanext-customschema.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the
+# ckanext-customschema
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ckanext-customschema 0.0.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-03-04 07:08+0000\n"
+"PO-Revision-Date: 2018-03-04 07:27+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ckanext/customschema/templates/package/snippets/additional_info.html:6
+#: ckanext/customschema/templates/package/snippets/package_basic_fields.html:4
+msgid "Start Date"
+msgstr "Start Date"
+
+#: ckanext/customschema/templates/package/snippets/additional_info.html:12
+#: ckanext/customschema/templates/package/snippets/package_basic_fields.html:5
+msgid "End Date"
+msgstr "End Date"
+
+#: ckanext/customschema/templates/package/snippets/package_basic_fields.html:4
+msgid "start date"
+msgstr "start date"
+
+#: ckanext/customschema/templates/package/snippets/package_basic_fields.html:5
+msgid "end date"
+msgstr "end date"
+
+#: ckanext/customschema/templates/package/snippets/package_basic_fields.html:6
+msgid "Last Update Date"
+msgstr "Last Update Date"
+
+#: ckanext/customschema/templates/package/snippets/package_basic_fields.html:6
+msgid "last update date"
+msgstr "last update date"
+

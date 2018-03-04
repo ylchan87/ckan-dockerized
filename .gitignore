@@ -2,3 +2,4 @@
 db_data
 ckan_storage
 redis_data
+*.pyc

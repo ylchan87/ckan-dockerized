@@ -1,0 +1,48 @@
+# Chinese (Traditional, Taiwan) translations for ckanext-customschema.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the
+# ckanext-customschema
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ckanext-customschema 0.0.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-03-04 07:08+0000\n"
+"PO-Revision-Date: 2018-03-04 07:27+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_Hant_TW\n"
+"Language-Team: zh_Hant_TW <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ckanext/customschema/templates/package/snippets/additional_info.html:6
+#: ckanext/customschema/templates/package/snippets/package_basic_fields.html:4
+msgid "Start Date"
+msgstr "開始日期"
+
+#: ckanext/customschema/templates/package/snippets/additional_info.html:12
+#: ckanext/customschema/templates/package/snippets/package_basic_fields.html:5
+msgid "End Date"
+msgstr "結束日期"
+
+#: ckanext/customschema/templates/package/snippets/package_basic_fields.html:4
+msgid "start date"
+msgstr "開始日期"
+
+#: ckanext/customschema/templates/package/snippets/package_basic_fields.html:5
+msgid "end date"
+msgstr "結東日期"
+
+#: ckanext/customschema/templates/package/snippets/package_basic_fields.html:6
+msgid "Last Update Date"
+msgstr "最後更新日期"
+
+#: ckanext/customschema/templates/package/snippets/package_basic_fields.html:6
+msgid "last update date"
+msgstr "最後更新日期"
+

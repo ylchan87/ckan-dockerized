@@ -1,10 +1,22 @@
 {% ckan_extends %}
 
 {% block extras %}
-  {% if pkg_dict.custom_text %}
+  {% if pkg_dict.start_date %}
     <tr>
-      <th scope="row" class="dataset-label">{{ _("Custom Text") }}</th>
-      <td class="dataset-details">{{ pkg_dict.custom_text }}</td>
+      <th scope="row" class="dataset-label">{{ _("Start Date") }}</th>
+      <td class="dataset-details">{{ pkg_dict.start_date }}</td>
+    </tr>
+  {% endif %}
+  {% if pkg_dict.end_date %}
+    <tr>
+      <th scope="row" class="dataset-label">{{ _("End Date") }}</th>
+      <td class="dataset-details">{{ pkg_dict.end_date }}</td>
+    </tr>
+  {% endif %}
+  {% if pkg_dict.last_update_date %}
+    <tr>
+      <th scope="row" class="dataset-label">{{ _("Last Update Date") }}</th>
+      <td class="dataset-details">{{ pkg_dict.last_update_date }}</td>
     </tr>
   {% endif %}
 {% endblock %}
