@@ -12,10 +12,13 @@ class CustomschemaPlugin(p.SingletonPlugin, DefaultTranslation, tk.DefaultDatase
     def _modify_schema(self, schema):
         schema.update({
             'start_date': [tk.get_validator('ignore_missing'),
+                           tk.get_validator('isodate'),
                            tk.get_converter('convert_to_extras')],
             'end_date': [tk.get_validator('ignore_missing'),
+                         tk.get_validator('isodate'),
                          tk.get_converter('convert_to_extras')],
             'last_update_date': [tk.get_validator('ignore_missing'),
+                                 tk.get_validator('isodate'),
                                  tk.get_converter('convert_to_extras')],
         })
         return schema
@@ -34,10 +37,13 @@ class CustomschemaPlugin(p.SingletonPlugin, DefaultTranslation, tk.DefaultDatase
         schema = super(CustomschemaPlugin, self).show_package_schema()
         schema.update({
             'start_date': [tk.get_converter('convert_from_extras'),
+                           tk.get_validator('isodate'),
                            tk.get_validator('ignore_missing')],
             'end_date': [tk.get_converter('convert_from_extras'),
+                         tk.get_validator('isodate'),
                          tk.get_validator('ignore_missing')],
             'last_update_date': [tk.get_converter('convert_from_extras'),
+                                 tk.get_validator('isodate'),
                                  tk.get_validator('ignore_missing')],
         })
         return schema
