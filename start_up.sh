@@ -29,4 +29,6 @@ fi
 # Need this so that dataset will appear after container removal
 paster --plugin=ckan search-index rebuild -c /etc/ckan/default/production.ini
 
+python -c 'import sys; print(sys.prefix)'
+
 ckan serve

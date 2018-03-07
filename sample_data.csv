@@ -1,0 +1,5 @@
+is data,#,random,分工,tag 分工,分層一,分層二,分層三,標題,資料來源,註,連結,,,,關鍵詞1,關鍵詞2,關鍵詞3,"最後更新日期",來源機構,地區,"更新頻率","數據開始日期",數據結束日期,"連結文件格式",
+1,123,0.8452371823,1,Glen,,,,公營房屋建屋量的5年推算數字,立法會ISSH09/16-17公共房屋圖6,,http://www.legco.gov.hk/research-publications/chinese/housing-housing-demand.htm,,,,公屋,落成數量,,2016-11-22,立法會,全港,一次性,2001-01-01,2016-01-01,pdf,
+1,301,0.9042531957,1,Glen,,,,新造按揭貸款的平均按揭成數及個人債務負擔,貨幣與金融穩定情況半年度報告圖5.12,,http://www.hkma.gov.hk/chi/publications-and-research/half-yearly-monetary-and-financial-stability-report/,,,,按揭,,,2017-03-31,金融管理局,全港,每半年,2003-12,2017-09,pdf,問題：網頁更新日期/出版日期/發佈日期　不等於　數據本身/調查日期，如何處理？
+1,183,0.2044593395,1,Glen,,,,按用途及地區劃分的新落成樓宇的實用樓面面積,,,http://www.cityu.edu.hk/hkhousing/hs/others/chi_body.htm,,,,面積,單位數量,,2005,房屋委員會,全港; 港島; 九龍; 新界,不再更新,1980,2005,html,
+1,18,0.980994989,1,Glen,,,,按住戶人數劃分的家庭住戶數目分布,香港統計年刊表1.11,,http://www.censtatd.gov.hk/hkstat/sub/sp100_tc.jsp?productCode=B1010003,,,,人口,住戶數目,,2017,政府統計署,全港,每年,2005,2017,pdf,

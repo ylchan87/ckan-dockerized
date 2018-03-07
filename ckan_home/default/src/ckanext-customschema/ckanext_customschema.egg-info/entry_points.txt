@@ -1,7 +1,0 @@
-
-        [ckan.plugins]
-        customschema=ckanext.customschema.plugin:CustomschemaPlugin
-
-        [babel.extractors]
-        ckan = ckan.lib.extract:extract_ckan
-    
