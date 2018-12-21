@@ -22,8 +22,10 @@ RUN mv /etc/solr/conf/schema.xml /etc/solr/conf/schema.xml.bak
 COPY schema.xml /etc/solr/conf/schema.xml
 
 # Setup plugin
-COPY ckanext-customschema /usr/lib/ckan/default/src/ckanext-customschema
-WORKDIR /usr/lib/ckan/default/src/ckanext-customschema
+WORKDIR /usr/lib/ckan/default/src/
+RUN /bin/bash -c "git clone https://github.com/ylchan87/ckanext-landdbcustomize.git"
+WORKDIR /usr/lib/ckan/default/src/ckanext-landdbcustomize/
+RUN /bin/bash -c "git checkout tags/0.0.2"
 RUN /bin/bash -c "source /usr/lib/ckan/default/bin/activate;python setup.py develop"
 
 # Set back workdir so taht start_up.sh can run

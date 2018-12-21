@@ -32,9 +32,17 @@
 
 ## Plugin
 
-1. `ckanext-customschema/ckanext/customschema/plugin.py`, add custom fields in this file (start_date, end_date, last_update_date)
+1. `ckanext-customschema`, add custom fields in this file (start_date, end_date, last_update_date) currently not used
 
-2. `ckanext-customschema/ckanext/customschema/templates/package/snippets/`, update html files in this directory to show custom fields in website
+2. `ckanext-landdbcustomize`, add custom fields and tag vocab
+
+## Develop
+
+1. Write your own ckan extension, or fork 'ylchan87/ckanext-landdbcustomize'
+
+2. Edit Dockerfile to git clone your plugin then install it
+
+3. Edit production.ini to include your plugin in ckan
 
 ## Import data
 Import data is unfinished, please update import.py
