@@ -30,9 +30,9 @@ RUN patch < multilingual_ext.patch
 
 # Setup plugin
 WORKDIR /usr/lib/ckan/default/src/
-RUN /bin/bash -c "git clone https://github.com/ylchan87/ckanext-landdbcustomize.git"
+RUN /bin/bash -c "git clone https://github.com/ylchan87/ckanext-landdbcustomize.git " 
 WORKDIR /usr/lib/ckan/default/src/ckanext-landdbcustomize/
-RUN /bin/bash -c "git checkout tags/0.0.3"
+RUN /bin/bash -c "git checkout tags/0.0.4"
 RUN /bin/bash -c "source /usr/lib/ckan/default/bin/activate;python setup.py develop"
 
 RUN /bin/bash -c "source /usr/lib/ckan/default/bin/activate;pip install -e git+http://github.com/ckan/ckanext-issues#egg=ckanext-issues"

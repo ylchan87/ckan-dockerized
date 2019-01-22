@@ -1,7 +1,6 @@
 #!/bin/bash
 
 source /usr/lib/ckan/default/bin/activate
-paster --plugin=ckanext-issues issues init_db -c ckan.ini
 
 # service postgresql start
 service jetty8 start
@@ -25,6 +24,7 @@ else
     # sudo -u postgres createdb -O ckan_default ckan_default -E utf-8
 
     ckan db init
+    paster --plugin=ckanext-issues issues init_db -c /etc/ckan/default/production.ini
 fi
 
 # Need this so that dataset will appear after container removal
@@ -45,4 +45,5 @@ a2enmod xml2enc
 a2enmod ssl
 service apache2 restart
 
+#sleep infinity
 ckan serve
