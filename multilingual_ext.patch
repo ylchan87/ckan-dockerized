@@ -1,0 +1,11 @@
+--- plugin.py_bkup      2019-01-22 05:07:36.401762980 +0000
++++ plugin.py   2019-01-22 05:07:55.029147903 +0000
+@@ -7,7 +7,7 @@
+ from ckan.common import request, config, c
+ from ckan.logic import get_action
+ 
+-LANGS = ['en', 'fr', 'de', 'es', 'it', 'nl', 'ro', 'pt', 'pl']
++LANGS = ['en', 'fr', 'de', 'es', 'it', 'nl', 'ro', 'pt', 'pl', 'zh_TW', 'zh_CN']
+ 
+ def translate_data_dict(data_dict):
+     '''Return the given dict (e.g. a dataset dict) with as many of its fields

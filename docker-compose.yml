@@ -11,7 +11,8 @@ services:
       - ./ckanext-customschema:/usr/lib/ckan/default/src/ckanext-customschema
       - ./ckan_storage:/var/lib/ckan
     ports:
-      - "5000:5000"
+      - "80:80"
+      - "443:443"
     env_file: .env
     command: ./start_up.sh
   postgres:
