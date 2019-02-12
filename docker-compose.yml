@@ -9,10 +9,13 @@ services:
       - ./start_up.sh:/start_up.sh
       - ./ckan_config:/etc/ckan
       - ./ckanext-customschema:/usr/lib/ckan/default/src/ckanext-customschema
+      # uncomment to use local mapped vol for dev
+      #- ./ckanext-landdbcustomize:/usr/lib/ckan/default/src/ckanext-landdbcustomize
       - ./ckan_storage:/var/lib/ckan
     ports:
       - "80:80"
       - "443:443"
+      - "8800:8800"
     env_file: .env
     command: ./start_up.sh
   postgres:

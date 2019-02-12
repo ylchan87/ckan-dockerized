@@ -2,6 +2,14 @@
 
 source /usr/lib/ckan/default/bin/activate
 
+# ------------------------------------------------------
+# uncomment to use local mapped vol for dev instead
+#TMPDIR=$PWD
+#cd /usr/lib/ckan/default/src/ckanext-landdbcustomize/
+#python setup.py develop
+#cd $TMPDIR
+# ------------------------------------------------------
+
 # service postgresql start
 service jetty8 start
 
@@ -25,6 +33,10 @@ else
 
     ckan db init
     paster --plugin=ckanext-issues issues init_db -c /etc/ckan/default/production.ini
+
+    PGPASSWORD=example createuser -U ckan_default -h postgres -S -D -R -l datastore_default
+    PGPASSWORD=example psql -U ckan_default -h postgres -c "ALTER USER datastore_default WITH PASSWORD 'example';"
+    paster --plugin=ckan datastore set-permissions -c /etc/ckan/default/production.ini | PGPASSWORD=example psql -U ckan_default -h postgres --set ON_ERROR_STOP=1
 fi
 
 # Need this so that dataset will appear after container removal
@@ -45,5 +57,8 @@ a2enmod xml2enc
 a2enmod ssl
 service apache2 restart
 
+# during dev, use sleep so you can manually start ckan later (in the container bash)
 #sleep infinity
+
+# during deploy just start ckan when container is up
 ckan serve
