@@ -36,7 +36,7 @@ else
 
     PGPASSWORD=example createuser -U ckan_default -h postgres -S -D -R -l datastore_default
     PGPASSWORD=example psql -U ckan_default -h postgres -c "ALTER USER datastore_default WITH PASSWORD 'example';"
-    PGPASSWORD=example creatdb -U ckan_default -h postgres -O ckan_default datastore_default -E utf-8
+    PGPASSWORD=example createdb -U ckan_default -h postgres -O ckan_default datastore_default -E utf-8
     paster --plugin=ckan datastore set-permissions -c /etc/ckan/default/production.ini | PGPASSWORD=example psql -U ckan_default -h postgres --set ON_ERROR_STOP=1
 fi
 

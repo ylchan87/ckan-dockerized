@@ -44,7 +44,7 @@ RUN patch < datapusher.patch
 WORKDIR /usr/lib/ckan/default/src/
 RUN /bin/bash -c "git clone https://github.com/ylchan87/ckanext-landdbcustomize.git " 
 WORKDIR /usr/lib/ckan/default/src/ckanext-landdbcustomize/
-RUN /bin/bash -c "git checkout tags/0.0.7"
+RUN /bin/bash -c "git checkout tags/0.0.8"
 RUN /bin/bash -c "source /usr/lib/ckan/default/bin/activate;python setup.py develop"
 
 # to use local mapped vol for dev instead, edit startup.sh plus docker_compose.yml
